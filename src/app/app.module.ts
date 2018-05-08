@@ -6,12 +6,14 @@ import { BarChartComponent } from './skills/bar-chart/bar-chart.component';
 import { HomeComponent } from './home/home.component';
 
 import {appRoutingProviders, routing} from './app.routing';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BarChartComponent,
     HomeComponent,
+    CarouselComponent,
   ],
   imports: [
     BrowserModule,
