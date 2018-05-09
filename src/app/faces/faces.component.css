@@ -1,5 +1,5 @@
 .pic {
-  margin: 0 auto;
+  margin: 10px auto;
   -webkit-filter: grayscale(100%); filter: grayscale(100%);
   border-radius:10em;
   height:6em;
@@ -11,8 +11,21 @@
 }
 .pic:hover {
   -webkit-filter: grayscale(0%); filter: grayscale(0%);
+  cursor: pointer;
 }
 
 .faceContainer{
   text-align: center;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  background-color: #2900cc;
+  background-image: url("../../assets/back-pattern.png");
+  margin: 10px 0;
+  border-radius: 25px;
+  padding-bottom: 10px;
+}
+
+.faceName{
+  color: white;
 }

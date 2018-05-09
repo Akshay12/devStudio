@@ -13,8 +13,8 @@ import { FacesComponent} from './faces/faces.component';
   declarations: [
     AppComponent,
     BarChartComponent,
-    FacesComponent
-    HomeComponent,
+    FacesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
