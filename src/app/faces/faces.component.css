@@ -1,0 +1,36 @@
+.pic {
+  margin: 15px auto 0;
+  -webkit-filter: grayscale(100%); filter: grayscale(100%);
+  border-radius:10em;
+  height:6em;
+  width:6em;
+  background-size: 100% auto;
+  display: inline-block;
+  border: 2px solid #e0e0e0;
+  transition : all 0.5s linear;
+}
+.pic:hover {
+  -webkit-filter: grayscale(0%); filter: grayscale(0%);
+  cursor: pointer;
+}
+
+.pic.active{
+  -webkit-filter: grayscale(0%); filter: grayscale(0%);
+  border-color: #34ce57;
+}
+
+.faceContainer{
+  text-align: center;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  background-color: #2900cc;
+  background-image: url("../../assets/back-pattern.png");
+  margin: 10px 0;
+  border-radius: 25px;
+  padding-bottom: 10px;
+}
+
+.faceName{
+  color: white;
+}
