@@ -7,3 +7,7 @@
 .axis .domain {
     display: none;
   }
+body{
+  background-color: #ffffff;
+  background-image: url("./assets/brushed-alum.png");
+}

@@ -6,12 +6,14 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import {appRoutingProviders, routing} from './app.routing';
+import { FacesComponent} from './faces/faces.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BarChartComponent,
-    HomeComponent,
+    FacesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
