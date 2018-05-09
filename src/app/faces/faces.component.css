@@ -1,5 +1,5 @@
 .pic {
-  margin: 10px auto;
+  margin: 15px auto 0;
   -webkit-filter: grayscale(100%); filter: grayscale(100%);
   border-radius:10em;
   height:6em;

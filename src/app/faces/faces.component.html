@@ -1,7 +1,8 @@
 <div class="faceContainer row">
   <div class="devFaces col-3" *ngFor="let face of faces; index as i">
     <span *ngIf="face">
-      <div class="pic" (click)="clickedFaces[i] = !clickedFaces[i]; unclickFaces(i)" [ngStyle]="{'background-image': 'url('+face.img+')'}" [class.active]="clickedFaces[i]"></div>
+      <div class="pic" (click)="clickedFaces[i] = !clickedFaces[i]; unclickFaces(i)"
+           [ngStyle]="{'background-image': 'url('+face.img+')'}" [class.active]="clickedFaces[i]" (focus)="clickedFaces[i]"></div>
       <div class="faceName">{{face.name}}</div>
     </span>
   </div>
