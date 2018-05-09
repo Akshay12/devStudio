@@ -4,3 +4,7 @@
 /* fonts */
 @import '~font-awesome/css/font-awesome.css';
 
+body{
+  background-color: #ffffff;
+  background-image: url("./assets/brushed-alum.png");
+}
