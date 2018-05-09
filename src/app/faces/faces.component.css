@@ -1,0 +1,18 @@
+.pic {
+  margin: 0 auto;
+  -webkit-filter: grayscale(100%); filter: grayscale(100%);
+  border-radius:10em;
+  height:6em;
+  width:6em;
+  background-size: 100% auto;
+  display: inline-block;
+  border: 2px solid #e0e0e0;
+  transition : all 0.5s linear;
+}
+.pic:hover {
+  -webkit-filter: grayscale(0%); filter: grayscale(0%);
+}
+
+.faceContainer{
+  text-align: center;
+}
