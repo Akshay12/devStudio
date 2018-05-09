@@ -23,6 +23,10 @@
 
 <div class="row">
   <div class="col-3 col-bottom-margin" *ngFor="let project of projects">
-    <div class="temp-css">Project Card Component goes here</div>
+    <!-- <div class="temp-css">Project Card Component goes here</div> -->
+
+    <app-project-card
+      [projectData]="project.data"
+    ></app-project-card>
   </div>
 </div>
