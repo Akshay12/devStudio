@@ -15,7 +15,7 @@ export class BarChartComponent implements OnInit {
   user = "";
 
   // var - testing
-
+ // lol
   // INIT
   ngOnInit() {
   
