@@ -4,6 +4,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { BarChartComponent } from './skills/bar-chart/bar-chart.component';
+import { HomeComponent } from './home/home.component';
+
+import {appRoutingProviders, routing} from './app.routing';
 import { FacesComponent} from './faces/faces.component';
 
 @NgModule({
@@ -11,12 +14,14 @@ import { FacesComponent} from './faces/faces.component';
     AppComponent,
     BarChartComponent,
     FacesComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    routing
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
