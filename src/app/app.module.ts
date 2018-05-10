@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgxChartsModule } from "@swimlane/ngx-charts";
 import { appRoutingProviders, routing } from './app.routing';
 import { FacesComponent} from './faces/faces.component';
+import {MemberBioComponent} from "./member-bio/member-bio.component";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FacesComponent} from './faces/faces.component';
     BarChartComponent,
     ProjectCardComponent,
     FacesComponent,
-    HomeComponent
+    HomeComponent,
+    MemberBioComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +28,10 @@ import { FacesComponent} from './faces/faces.component';
     BarChartModule,
     BrowserAnimationsModule,
      NgxChartsModule
+    
+  ],
+  exports: [
+    MemberBioComponent
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

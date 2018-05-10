@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FaceService } from './face-service.service';
+import { MemberService } from './../services/member-service.service';
+
 @Component({
   selector: 'app-our-faces',
   templateUrl: './faces.component.html',
@@ -8,27 +9,33 @@ import { FaceService } from './face-service.service';
 export class FacesComponent implements OnInit {
   faces: any;
   clickedFaces: any;
-
-  constructor(private faceService: FaceService) {}
-
-  unclickFaces(index) {
-    for (const t in this.clickedFaces) {
-      if (index !== parseInt(t, null)) {
+  activeFace: any;
+  unclickFaces(index){
+    for(let t in this.clickedFaces){
+      if(index !== parseInt(t)){
         this.clickedFaces[t] = false;
       }
     }
+  };
+  setOrUnsetFace(index){
+    if(this.faces.indexOf(this.activeFace) === index){
+      this.activeFace = null;
+    }
+    else{
+      this.activeFace = this.faces[index];
+    }
   }
+  constructor(private memberService: MemberService) { }
 
   ngOnInit() {
-    // retrieve from face service
-    this.faceService.getFaces().subscribe(res => {
+    //retrieve from face service
+    this.memberService.getFaces().subscribe(res => {
       this.faces = res;
-      if (this.faces !== undefined && this.faces.length > 0) {
-        this.clickedFaces = new Array(this.faces.length);
-        for (let i = 0; i < this.faces.length; i++) {
-          this.clickedFaces[i] = false;
-        }
+      this.clickedFaces = new Array(this.faces);
+      for(let i in this.clickedFaces){
+        this.clickedFaces[i] = false;
       }
     });
   }
+
 }
