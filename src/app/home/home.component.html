@@ -2,7 +2,7 @@
   <h1>Gallery goes here</h1>
   <p>Dev Studio is the coolest thing since sliced bread...</p>
 </div>
-<our-faces></our-faces>
+<app-our-faces></app-our-faces>
 
 <div class="row">
   <div class="col-12">
@@ -19,6 +19,10 @@
 
 <div class="row">
   <div class="col-3 col-bottom-margin" *ngFor="let project of projects">
-    <div class="temp-css">Project Card Component goes here</div>
+    <!-- <div class="temp-css">Project Card Component goes here</div> -->
+
+    <app-project-card
+      [projectData]="project.data"
+    ></app-project-card>
   </div>
 </div>
