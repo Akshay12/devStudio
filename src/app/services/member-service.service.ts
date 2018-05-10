@@ -5,10 +5,10 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class FaceService {
+export class MemberService {
 
   constructor(private http: HttpClient) { }
-  facesUrl = '../assets/faces.json';
+  facesUrl = '../assets/data/members.json';
   getFaces(){
     return this.http.get(this.facesUrl);
   }

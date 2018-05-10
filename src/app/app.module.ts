@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import {appRoutingProviders, routing} from './app.routing';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { FacesComponent} from './faces/faces.component';
+import {MemberBioComponent} from "./member-bio/member-bio.component";
 
 @NgModule({
   declarations: [
@@ -16,12 +17,17 @@ import { FacesComponent} from './faces/faces.component';
     BarChartComponent,
     ProjectCardComponent,
     FacesComponent,
-    HomeComponent
+    HomeComponent,
+    MemberBioComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    routing
+    routing,
+    
+  ],
+  exports: [
+    MemberBioComponent
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
