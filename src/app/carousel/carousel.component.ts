@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarouselComponent implements OnInit {
 
-  constructor() { }
+  items: Array<any> = []
+  
+  constructor (){
+    this.items = [
+      { name: 'assets/images/comp2.jpg' },
+      { name: 'assets/images/washington.jpg' },
+      { name: 'assets/images/ad2.jpg' },
+    ]
+  }
 
   ngOnInit() {
   }

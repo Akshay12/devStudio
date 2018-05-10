@@ -399,6 +399,16 @@
   dependencies:
     "@types/jasmine" "*"
 
+"@types/lodash.isequal@^4.5.2":
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/@types/lodash.isequal/-/lodash.isequal-4.5.2.tgz#adbdff67f7c956ed703009e5466a34eeddb0b712"
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash@*":
+  version "4.14.108"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.108.tgz#02656af3add2e5b3174f830862c47421c00ef817"
+
 "@types/node@^6.0.46":
   version "6.0.109"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.109.tgz#addc070c5b0a528c286ff4188d7dcafdafbfdcce"
@@ -3874,6 +3884,10 @@ lodash.clonedeep@^4.3.2, lodash.clonedeep@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
 
+lodash.isequal@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+
 lodash.mergewith@^4.6.0:
   version "4.6.1"
   resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.1.tgz#639057e726c3afbdb3e7d42741caa8d6e4335927"
@@ -4241,6 +4255,13 @@ neo-async@^2.5.0:
 next-tick@1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
+
+ng2-carouselamos@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/ng2-carouselamos/-/ng2-carouselamos-3.2.0.tgz#efd98f61281289e269e270895332b77d733a6e46"
+  dependencies:
+    "@types/lodash.isequal" "^4.5.2"
+    lodash.isequal "^4.5.0"
 
 no-case@^2.2.0:
   version "2.3.2"
