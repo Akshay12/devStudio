@@ -8,18 +8,24 @@ import { HomeComponent } from './home/home.component';
 
 import {appRoutingProviders, routing} from './app.routing';
 import { FacesComponent} from './faces/faces.component';
+import {MemberBioComponent} from "./member-bio/member-bio.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     BarChartComponent,
     FacesComponent,
-    HomeComponent
+    HomeComponent,
+    MemberBioComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    routing
+    routing,
+    
+  ],
+  exports: [
+    MemberBioComponent
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

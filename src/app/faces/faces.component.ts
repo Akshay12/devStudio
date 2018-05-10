@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FaceService } from './face-service.service';
+import { MemberService } from './../services/member-service.service';
 
 @Component({
   selector: 'our-faces',
@@ -7,8 +7,9 @@ import { FaceService } from './face-service.service';
   styleUrls: ['./faces.component.css']
 })
 export class FacesComponent implements OnInit {
-  faces = new Array(1);
+  faces: any;
   clickedFaces: any;
+  activeFace: any;
   unclickFaces(index){
     for(var t in this.clickedFaces){
       if(index !== parseInt(t)){
@@ -16,17 +17,23 @@ export class FacesComponent implements OnInit {
       }
     }
   };
-  constructor(private faceService: FaceService) { }
+  setOrUnsetFace(index){
+    if(this.faces.indexOf(this.activeFace) === index){
+      this.activeFace = null;
+    }
+    else{
+      this.activeFace = this.faces[index];
+    }
+  }
+  constructor(private memberService: MemberService) { }
 
   ngOnInit() {
     //retrieve from face service
-    this.faceService.getFaces().subscribe(res => {
+    this.memberService.getFaces().subscribe(res => {
       this.faces = res;
-      if(res !== undefined && res.length > 0) {
-        this.clickedFaces = new Array(res.length);
-        for(var i in this.clickedFaces){
-          this.clickedFaces[i] = false;
-        }
+      this.clickedFaces = new Array(this.faces);
+      for(var i in this.clickedFaces){
+        this.clickedFaces[i] = false;
       }
     });
   }

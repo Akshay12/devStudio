@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { FaceService } from './face-service.service.ts';
+import { FaceService } from './../services/member-service.service.ts';
 
 describe('FaceService', () => {
   beforeEach(() => {
