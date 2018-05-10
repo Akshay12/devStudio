@@ -3,10 +3,6 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 /* fonts */
 @import '~font-awesome/css/font-awesome.css';
-
-.axis .domain {
-    display: none;
-  }
 body{
   background-color: #ffffff;
   background-image: url("./assets/brushed-alum.png");

@@ -4,9 +4,11 @@ import { AppComponent } from './app.component';
 import { BarChartComponent } from './skills/bar-chart/bar-chart.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
-
-import {appRoutingProviders, routing} from './app.routing';
 import { ProjectCardComponent } from './project-card/project-card.component';
+import { BarChartModule } from '@swimlane/ngx-charts';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { NgxChartsModule } from "@swimlane/ngx-charts";
+import { appRoutingProviders, routing } from './app.routing';
 import { FacesComponent} from './faces/faces.component';
 
 @NgModule({
@@ -20,7 +22,10 @@ import { FacesComponent} from './faces/faces.component';
   imports: [
     BrowserModule,
     routing,
-    HttpClientModule
+    HttpClientModule,
+    BarChartModule,
+    BrowserAnimationsModule,
+     NgxChartsModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

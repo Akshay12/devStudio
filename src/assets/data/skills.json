@@ -1,101 +1,106 @@
 [
   {
-    "name": "Chris",
+    "name": "Angular",
     "skills": [
       {
-        "name": "angular",
-        "level": "5"
+        "name": "Chris",
+        "years": "5"
       },
       {
-        "name": "html",
-        "level": "5"
+        "name": "Akshay",
+        "years": "5"
       },
       {
-        "name": "css",
-        "level": "4"
+        "name": "Pedrum",
+        "years": "4"
       },
       {
-        "name": "typescript",
-        "level": "4"
-      },
-      {
-        "name": "git",
-        "level": "3"
+        "name": "Mary",
+        "years": "4"
       }
     ]
   },
   {
-    "name": "Pedrum",
+    "name": "HTML",
     "skills": [
       {
-        "name": "angular",
-        "level": "5"
+        "name": "Chris",
+        "years": "6"
       },
       {
-        "name": "html",
-        "level": "5"
+        "name": "Akshay",
+        "years": "5"
       },
       {
-        "name": "css",
-        "level": "4"
+        "name": "Pedrum",
+        "years": "4"
       },
       {
-        "name": "typescript",
-        "level": "4"
-      },
-      {
-        "name": "git",
-        "level": "3"
+        "name": "Mary",
+        "years": "3"
       }
     ]
   },
   {
-    "name": "Akshay",
+    "name": "CSS",
     "skills": [
       {
-        "name": "angular",
-        "level": "5"
+        "name": "Chris",
+        "years": "5"
       },
       {
-        "name": "html",
-        "level": "5"
+        "name": "Akshay",
+        "years": "5"
       },
       {
-        "name": "css",
-        "level": "4"
+        "name": "Pedrum",
+        "years": "4"
       },
       {
-        "name": "typescript",
-        "level": "4"
-      },
-      {
-        "name": "git",
-        "level": "3"
+        "name": "Mary",
+        "years": "4"
       }
     ]
   },
   {
-    "name": "Mary",
+    "name": "TypeScript",
     "skills": [
       {
-        "name": "angular",
-        "level": "5"
+        "name": "Chris",
+        "years": "5"
       },
       {
-        "name": "html",
-        "level": "5"
+        "name": "Akshay",
+        "years": "5"
       },
       {
-        "name": "css",
-        "level": "4"
+        "name": "Pedrum",
+        "years": "4"
       },
       {
-        "name": "typescript",
-        "level": "4"
+        "name": "Mary",
+        "years": "4"
+      }
+    ]
+  },
+  {
+    "name": "Git",
+    "skills": [
+      {
+        "name": "Chris",
+        "years": "5"
       },
       {
-        "name": "git",
-        "level": "3"
+        "name": "Akshay",
+        "years": "5"
+      },
+      {
+        "name": "Pedrum",
+        "years": "4"
+      },
+      {
+        "name": "Mary",
+        "years": "4"
       }
     ]
   }
