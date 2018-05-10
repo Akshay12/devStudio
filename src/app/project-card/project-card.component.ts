@@ -6,8 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./project-card.component.css']
 })
 export class ProjectCardComponent implements OnInit {
-
-  @Input() projectData: any;
+  @Input() project: any;
 
   constructor() { }
 

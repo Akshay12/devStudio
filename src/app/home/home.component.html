@@ -21,7 +21,8 @@
     <!-- <div class="temp-css">Project Card Component goes here</div> -->
 
     <app-project-card
-      [projectData]="project.data"
+      [project]="project"
+      (click)="project.expanded=(!project.expanded)"
     ></app-project-card>
   </div>
 </div>

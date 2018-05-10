@@ -5,12 +5,11 @@
 
 
   <div class="card-img-overlay">
-    <h4 class="card-title">What Next?</h4>
-    <p class="card-text">Is this the end?</p>
+    <h4 class="card-title">{{project.name}}</h4>
   </div>
 
-  <div class="card-body">
-    Tune in next week to find out!
+  <div *ngIf="project.expanded" class="card-body">
+    {{project.text}}
   </div>
 
 </div>
