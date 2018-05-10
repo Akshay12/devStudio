@@ -14,6 +14,25 @@
     z-index: 2; /* the stack order: displayed under ribbon rectangle */
 }
 
+.bubble.active{
+    -webkit-animation-name: bubble;
+    -webkit-animation-duration: 4s;
+    animation-name: bubble;
+    animation-duration: 2s;
+    height: auto;
+}
+
+@keyframes bubble {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 /* Ribbon header */
 .rectangle {
     background: #C0A16B;
