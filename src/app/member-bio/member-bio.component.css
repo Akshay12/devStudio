@@ -24,7 +24,7 @@
 
 @keyframes bubble {
     from {
-        transform: translateY(-100%);
+        transform: translateY(-90%);
         opacity: 0;
     }
     to {
