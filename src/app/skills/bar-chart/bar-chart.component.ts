@@ -2,10 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { barChartService } from './bar-chart-service';
-import * as d3 from 'd3-collection';
-import { colorSets as ngxChartsColorsets } from '@swimlane/ngx-charts/release/utils/color-sets';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
-import {BarChartModule} from '@swimlane/ngx-charts';
+
+//d3
+import * as d3 from 'd3-selection';
+import * as d3Scale from 'd3-scale';
+import * as d3Shape from 'd3-shape';
+import * as d3Axis from 'd3-axis';
+import * as d3Array from 'd3-array';
+
+export interface Margin {
+  top: number;
+  right: number;
+  bottom: number;
+  left: number;
+}
 
 @Component({
   selector: 'app-bar-chart',
@@ -14,119 +24,7 @@ import {BarChartModule} from '@swimlane/ngx-charts';
 })
 export class BarChartComponent implements OnInit {
 
-  // var - provided JSON
-  skills: any;
   // var - testing
-  data: any[] = [
-    [
-      {
-        "name": "Angular",
-        "skills": [
-          {
-            "name": "Chris",
-            "years": "5"
-          },
-          {
-            "name": "Akshay",
-            "years": "5"
-          },
-          {
-            "name": "Pedrum",
-            "years": "4"
-          },
-          {
-            "name": "Mary",
-            "years": "4"
-          }
-        ]
-      },
-      {
-        "name": "HTML",
-        "skills": [
-          {
-            "name": "Chris",
-            "years": "6"
-          },
-          {
-            "name": "Akshay",
-            "years": "5"
-          },
-          {
-            "name": "Pedrum",
-            "years": "4"
-          },
-          {
-            "name": "Mary",
-            "years": "3"
-          }
-        ]
-      },
-      {
-        "name": "CSS",
-        "skills": [
-          {
-            "name": "Chris",
-            "years": "5"
-          },
-          {
-            "name": "Akshay",
-            "years": "5"
-          },
-          {
-            "name": "Pedrum",
-            "years": "4"
-          },
-          {
-            "name": "Mary",
-            "years": "4"
-          }
-        ]
-      },
-      {
-        "name": "TypeScript",
-        "skills": [
-          {
-            "name": "Chris",
-            "years": "5"
-          },
-          {
-            "name": "Akshay",
-            "years": "5"
-          },
-          {
-            "name": "Pedrum",
-            "years": "4"
-          },
-          {
-            "name": "Mary",
-            "years": "4"
-          }
-        ]
-      },
-      {
-        "name": "Git",
-        "skills": [
-          {
-            "name": "Chris",
-            "years": "5"
-          },
-          {
-            "name": "Akshay",
-            "years": "5"
-          },
-          {
-            "name": "Pedrum",
-            "years": "4"
-          },
-          {
-            "name": "Mary",
-            "years": "4"
-          }
-        ]
-      }
-    ]
-    
-  ];
 
   single: any[] = [
     {
@@ -142,30 +40,48 @@ export class BarChartComponent implements OnInit {
       value: 3
     }
   ];
+  multi: any[] = [];
 
 
   // options
-  view: any[] = [600, 300];
+  view: any[] = [700, 300];
+  // options
   showXAxis = true;
   showYAxis = true;
   gradient = false;
   showLegend = true;
+  legendTitle = 'Legend';
   showXAxisLabel = true;
-  xAxisLabel = "Skills";
+  tooltipDisabled = false;
+  xAxisLabel = 'Skills';
   showYAxisLabel = true;
-  yAxisLabel = "Years";
+  yAxisLabel = 'Years';
+  showGridLines = true;
+  innerPadding = '10%';
+  barPadding = 8;
+  groupPadding = 16;
+  roundDomains = false;
+  maxRadius = 10;
+  minRadius = 3;
+  showSeriesOnHover = true;
+  roundEdges: boolean = true;
+  animations: boolean = false;
+  xScaleMin: any;
+  xScaleMax: any;
+  yScaleMin: number;
+  yScaleMax: number;
+  showDataLabel = false;
 
   colorScheme = {
     domain: ["#5AA454", "#A10A28", "#C7B42C", "#AAAAAA"]
   };
-  
-  constructor(private http: HttpClient, private barChartService: barChartService, barChart: BarChartModule) {}
+
+  constructor(private http: HttpClient, private barChartService: barChartService) {}
 
   // INIT
   ngOnInit() {
     // retrieve skills list from JSON
     //this.barChartService.getSkills().subscribe(res => {this.skills = res});
-    console.log(this.data.length);
     // init chart
   }
 
