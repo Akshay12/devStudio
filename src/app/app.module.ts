@@ -5,9 +5,7 @@ import { BarChartComponent } from './skills/bar-chart/bar-chart.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectCardComponent } from './project-card/project-card.component';
-import { BarChartModule } from '@swimlane/ngx-charts';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { NgxChartsModule } from "@swimlane/ngx-charts";
 import { appRoutingProviders, routing } from './app.routing';
 import { FacesComponent} from './faces/faces.component';
 import {MemberBioComponent} from "./member-bio/member-bio.component";
@@ -25,10 +23,7 @@ import {MemberBioComponent} from "./member-bio/member-bio.component";
     BrowserModule,
     routing,
     HttpClientModule,
-    BarChartModule,
-    BrowserAnimationsModule,
-     NgxChartsModule
-    
+    BrowserAnimationsModule
   ],
   exports: [
     MemberBioComponent
