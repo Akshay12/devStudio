@@ -1,13 +1,9 @@
-<div class="bubble" *ngIf="bio" [class.active]="bio">
+<div class="bubble row" *ngIf="bio" [class.active]="bio">
 
   <!-- Ribbon header -->
   <div class="rectangle">
     <h2>{{bio.name}}</h2>
   </div>
-
-  <!-- Ribbon side-fold (left and right) -->
-  <div class="triangle-l"></div>
-  <div class="triangle-r"></div>
 
   <!-- Content -->
   <div class="info">
