@@ -11,9 +11,10 @@ export class CarouselComponent implements OnInit {
   
   constructor (){
     this.items = [
-      { name: 'assets/images/comp2.jpg' },
-      { name: 'assets/images/washington.jpg' },
-      { name: 'assets/images/ad2.jpg' },
+      { name: 'assets/images/dy231.jpg' },
+      { name: 'assets/images/sunrise.jpg' },
+      { name: 'assets/images/rock.jpg' },
+      { name: 'assets/images/digit2.0.2.jpg' },
     ]
   }
 
